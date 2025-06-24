@@ -1,0 +1,9 @@
+Flask
+pandas
+scikit-learn
+joblib
+prometheus_flask_exporter
+ddtrace
+gunicorn
+datadog
+psutil

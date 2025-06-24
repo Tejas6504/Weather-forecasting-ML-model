@@ -1,0 +1,45 @@
+(venv) tejas8320@tejas8320-VMware-Virtual-Platform:~/MLOPS/Weather-Forecasting-using-ML-/weather forecasting$ curl -X POST http://4.144.58.187/predict   -H "Content-Type: application/json"   -d '{
+        "Year": "not-a-number",
+        "Month": null,
+        "Day": 15,
+        "Latitude": 12.5,
+        "Longitude": 75.2,
+        "Zonal Winds": 5.1,
+        "Meridional Winds": -2.8,
+        "Humidity": 75.0,
+        "Sea Surface Temp": 39.4
+      }'
+{"error":"could not convert string to float: 'not-a-number'"}
+(venv) tejas8320@tejas8320-VMware-Virtual-Platform:~/MLOPS/Weather-Forecasting-using-ML-/weather forecasting$ curl -X POST http://4.144.58.187/predict \
+  -H "Content-Type: application/json" \
+  -d '{
+        "Year": 1990,
+        "Month": 6,
+        "Day": 15,
+        "Latitude": 12.5,
+        "Longitude": 75.2,
+        "Zonal Winds": 5.1,
+        "Meridional Winds": -2.8,
+        "Humidity": 75.0,
+        "Sea Surface Temp": 29.4
+      }'
+{"Predicted Air Temp (\u00b0C)":17.17}
+(venv) tejas8320@tejas8320-VMware-Virtual-Platform:~/MLOPS/Weather-Forecasting-using-ML-/weather forecasting$ 
+
+
+nohup kubectl port-forward svc/monitoring-grafana 3000:80 > grafana.log 2>&1 &
+nohup kubectl port-forward svc/monitoring-kube-prometheus-prometheus 9090:9090 > prometheus.log 2>&1 &
+
+
+83  python3 -m venv venv
+   84  source venv/bin/activate
+   85  pip install pandas scikit-learn
+
+Always activate the virtual environment before running your app:
+
+bash
+Copy
+Edit
+cd ~/MLOPS/Weather-Forecasting-using-ML-/weather\ forecasting
+source venv/bin/activate
+https://us5.datadoghq.com/logs/onboarding/container

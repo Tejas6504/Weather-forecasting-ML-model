@@ -1,0 +1,11 @@
+{
+        "Year": "not-a-number",
+        "Month": null,
+        "Day": 15,
+        "Latitude": 12.5,
+        "Longitude": 75.2,
+        "Zonal Winds": 5.1,
+        "Meridional Winds": -2.8,
+        "Humidity": 75.0,
+        "Sea Surface Temp": 39.4
+}      

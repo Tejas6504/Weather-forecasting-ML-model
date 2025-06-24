@@ -1,0 +1,43 @@
+datadog:
+  apiKeyExistingSecret: datadog-secret
+  site: us5.datadoghq.com
+
+  logs:
+    enabled: true
+    containerCollectAll: true
+
+  apm:
+    enabled: true
+    portEnabled: true
+    socketEnabled: false
+
+  processAgent:
+    enabled: true
+
+  tags:
+    - env:prod
+    - service:weather-forecasting-datadog
+    - team:mlops
+
+agents:
+  containerLogs:
+    enabled: true
+
+clusterAgent:
+  enabled: true
+
+kubelet:
+  tlsVerify: false
+
+env:
+  - name: DD_ENV
+    value: "prod"
+  - name: DD_SERVICE
+    value: "weather-forecasting-datadog"
+  - name: DD_LOGS_ENABLED
+    value: "true"
+  - name: DD_APM_ENABLED
+    value: "true"
+  - name: DD_TRACE_SAMPLE_RATE
+    value: "1.0"
+
